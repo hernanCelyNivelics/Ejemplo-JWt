@@ -23,28 +23,28 @@ Contiene los metadatos que definen la tecnologia con la que se ecripta el token.
 	-ES384
 	-ES512
 
-##PAYLOAD
+## PAYLOAD
 
 Es la informacion que se esta enviando en el token.
 Dentro de este se encuentran los JWT Claims.
 
-	-iss->identifica el proveedor que emitio el JWT
-	-sub->Identifica el sujeto del JWt
-	-aud->Identifica para quien va el token, si este campo 	esta vacio el token debe ser rechazado.
-	-exp->El tiempo en el que el token no debe ser aceptaod 	si ya paso este tiempo.
-	-nbf->Tiempo que determina a partir de cuando puede ser 	usado.
-	-iat->Hora en la que se emitio el token.
-	-jti->Identificador unico del token.
+	-iss -> identifica el proveedor que emitio el JWT
+	-sub -> Identifica el sujeto del JWt
+	-aud -> Identifica para quien va el token, si este campo 	esta vacio el token debe ser rechazado.
+	-exp -> El tiempo en el que el token no debe ser aceptaod 	si ya paso este tiempo.
+	-nbf -> Tiempo que determina a partir de cuando puede ser 	usado.
+	-iat -> Hora en la que se emitio el token.
+	-jti -> Identificador unico del token.
 
-##SIGNATURE
+## SIGNATURE
 
 Es la firma de seguridad
-|HEADER|"typ":"JWT","alg":"HS256"|
-|PAYLOAD|"iss":"LoginApp","cedula":"123415"|
-|SIGNATURE|var str=base64Encode|
+| HEADER | "typ":"JWT","alg":"HS256" |
+| PAYLOAD | "iss":"LoginApp","cedula":"123415" |
+| SIGNATURE | var str=base64Encode |
 
 
-##CICLO DE VIDA DE UNA PETICION JWT
+## CICLO DE VIDA DE UNA PETICION JWT
 
 1. El usuario hace una peticion(GET,POST...)
 2. El servidor comprueba si existe un token, si no lo crea y lo firma.
